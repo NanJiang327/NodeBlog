@@ -1,0 +1,19 @@
+<div class="nav-setting">
+  <div class="ui buttons">
+    <div class="ui floating dropdown button">
+      <i class="icon bars"></i>
+      <div class="menu">
+        <% if (user) { %>
+          <a href="/posts?author=<%= user._id %>" class="item">Articles</a>
+          <div class="divider"></div>
+          <a href="/posts/create" class="item">New Post</a>
+          <a href="/signout" class="item">Sign Out</a>
+        <% } else { %>
+          <a href="/posts" class="item">Articles</a>
+          <a href="/signin" class="item">Sign In</a>
+          <a href="/signup" class="item">Sign Up</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
